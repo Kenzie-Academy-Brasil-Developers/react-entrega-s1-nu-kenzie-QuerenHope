@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Form = ({settarefas}) => {
+const Form = ({tarefas,settarefas}) => {
 
     const [descricao, setdescricao] = useState('')
     const [valor, setvalor] = useState('')
@@ -10,7 +10,7 @@ const Form = ({settarefas}) => {
 
     function handleSubmit(event) {
         event.preventDefault()
-
+        
         settarefas((oldtarefas) => [...oldtarefas,{
             descricao, valor, tipo }] )
     }
@@ -40,6 +40,7 @@ const Form = ({settarefas}) => {
                             name="tipoValor" 
                             id="tipoValor" 
                             onChange={event=> settipo(event.target.value)}>
+                            <option value="Escolha">Escolha um Valor</option>
                             <option value="Entrada">Entrada</option>
                             <option value="Saida">Saída</option>
                         </select>

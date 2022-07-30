@@ -121,7 +121,7 @@ form p {
 
 
 
- @media only screen and (min-width: 1025px) {
+ @media only screen and (min-width: 620px) {
   .container_header{
     display: flex;
     flex-direction: column;
@@ -212,3 +212,72 @@ form p {
  
 } 
 
+@media(max-width: 426px){
+
+  .cabecalho {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form{
+    width: 20rem;
+    
+  }
+
+  #input_descricao{
+    width: 90%;
+  }
+
+  #inserir {
+    background-color: #FD377E;
+    margin-top: 1.7rem;
+    color: aliceblue;
+    width: 100%;
+    height: 2rem;
+    cursor: pointer;
+  }
+
+  .container_header{
+    display: flex;
+    align-items: center;
+
+  }
+
+  .container_info{
+    margin-top: 22rem;
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    position: absolute;
+  }
+
+  .valorTotal{
+    position: absolute;
+    margin-top: 49rem;
+  }
+
+  .container_list{
+    position: absolute;
+    margin-top: 4rem;
+    width: 19rem;
+    height: 16rem;
+  }
+
+  .liCards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  
+}

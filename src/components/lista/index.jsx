@@ -1,8 +1,14 @@
 import {FaTrashAlt} from 'react-icons/fa'
 
-const Lista = ({tarefas}) => {
+const Lista = ({tarefas, settarefas}) => {
 
-    console.log(tarefas)
+    function remover(i) {
+
+        const remov = tarefas.filter((item,index)=> index !== i)
+
+        settarefas(remov)
+    }
+
     return(
         <>
             {
@@ -13,7 +19,7 @@ const Lista = ({tarefas}) => {
                         <h2>{tarefas.descricao}</h2>
                         <span>{tarefas.tipo}</span>
                         <p>{`R$ ${tarefas.valor}`}</p>
-                        <button><FaTrashAlt/></button>
+                        <button onClick={()=>remover(index)}><FaTrashAlt/></button>
                     </li>
                 </ul>
                 ))
